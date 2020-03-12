@@ -5,10 +5,26 @@ const app = getApp()
 Page({
   data: {
     username:'',
-    content:''
+    content:'',
+    msgs:[],
+  },
+  //获取留言集合
+  getMsgs:function(){
+    wx.request({
+      url: 'http://laravel1024.com/api/v1/msgs',
+      // data: e.detail.value,
+      header: { 'Accept': 'application/json' },
+      method: 'GET',
+      success: (data) => {
+        this.setData({
+          msgs:data.data
+        })
+        console.log(data.data)
+      }
+    })    
   },
   onLoad: function () {
-
+    this.getMsgs()
   },
   saveGbook: function (e) {
     console.log(e.detail.value)
@@ -24,6 +40,7 @@ Page({
             content:''            
           })
           wx.showToast({title:'发表成功'})
+          this.getMsgs()
         }else{
           wx.showToast({title:'发表失败',icon:'none'})
         }
