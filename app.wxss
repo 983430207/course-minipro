@@ -6,6 +6,10 @@
   justify-content: space-between;
   box-sizing: border-box;
 } 
+.image {
+  width: 100%;
+  border-radius: 5px;
+}
 .flex {
   display: flex;
   flex-direction: column;

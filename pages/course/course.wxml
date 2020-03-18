@@ -1,0 +1,20 @@
+<!-- pages/course/course.wxml -->
+<view class='container'>
+    <image src="{{course.image_link}}" class="image" mode="widthFix" />
+    <view class="page_title">
+        <text>/ {{course.title}} /</text>
+    </view>
+    <van-collapse value="{{ activeNames }}" bind:change="onChange" accordion>
+        <block wx:for-item="chapter" wx:key="id" wx:for="{{course.chapters}}">
+            <van-collapse-item title="{{chapter.title}}" name="{{chapter.id}}">
+                <block wx:for-item="resource" wx:key="id" wx:for="{{chapter.resources}}">
+                    <view class='flex course'>
+                        <van-icon name="play-circle-o" wx:if="{{resource.video}}"/>
+                        <van-icon name="orders-o" wx:if="{{resource.doc}}"/>
+                        <text>{{resource.title}}</text>
+                    </view>
+                </block>
+            </van-collapse-item>
+        </block>
+    </van-collapse>
+</view>

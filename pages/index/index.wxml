@@ -13,8 +13,10 @@
     </view>
     <block wx:for="{{courses}}" wx:key="id" wx:for-item="course">
         <view class='course flex'>
-            <image src="{{course.image_link}}" mode='widthFix' class='image'/>
-            <text class='title'>{{course.title}}</text>
+            <navigator url="/pages/course/course?course_id={{course.id}}" class="flex">
+                <image src="{{course.image_link}}" mode='widthFix' class='image'/>
+                <text class='title'>{{course.title}}</text>
+            </navigator>
         </view>
     </block>
 </view>
