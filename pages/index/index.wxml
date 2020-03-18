@@ -1,8 +1,20 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-<van-button type="default">默认按钮</van-button>
-<van-button type="primary">主要按钮</van-button>
-<van-button type="info">信息按钮</van-button>
-<van-button type="warning">警告按钮</van-button>
-<van-button type="danger">危险按钮</van-button>
+    <swiper indicator-dots="true" autoplay="true" style='height:100px;'>
+        <swiper-item item-id="1">
+            <image src="/resources/images/a.jpg" style="width:100%" mode="widthFix" />
+        </swiper-item>
+        <swiper-item item-id='2'>
+            <image src="/resources/images/b.jpg" style="width:100%" mode="widthFix" />
+        </swiper-item>
+    </swiper>
+    <view class='page_title'>
+        <text>/ PHP 学习路径 /</text>
+    </view>
+    <block wx:for="{{courses}}" wx:key="id" wx:for-item="course">
+        <view class='course flex'>
+            <image src="{{course.image_link}}" mode='widthFix' class='image'/>
+            <text class='title'>{{course.title}}</text>
+        </view>
+    </block>
 </view>

@@ -7,22 +7,14 @@ const app = getApp()
 
 Page({
   data: {
-    
+    courses:[]
   },
   onLoad: function () {
     api.courses({
-      success:(data)=>{
-        console.log(data)
-      }
-    })
-    api.course(5,{
-      success:(data)=>{
-        console.log(data)
-      }
-    })
-    api.resource(5,9,{
-      success:(data)=>{
-        console.log(data)
+      success:(res)=>{
+        this.setData({
+          courses:res.data
+        })
       }
     })
   },
