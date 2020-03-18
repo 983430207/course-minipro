@@ -1,0 +1,24 @@
+{
+  "name": "course-minipro",
+  "version": "1.0.0",
+  "description": "1024编程实验室授课项目。",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/983430207/course-minipro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/983430207/course-minipro/issues"
+  },
+  "homepage": "https://github.com/983430207/course-minipro#readme"
+}
