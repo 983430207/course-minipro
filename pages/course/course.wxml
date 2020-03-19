@@ -9,9 +9,11 @@
             <van-collapse-item title="{{chapter.title}}" name="{{chapter.id}}">
                 <block wx:for-item="resource" wx:key="id" wx:for="{{chapter.resources}}">
                     <view class='flex course'>
+                         <navigator url="/pages/learn/learn?course_id={{course.id}}&resource_id={{resource.id}}">
                         <van-icon name="play-circle-o" wx:if="{{resource.video}}"/>
                         <van-icon name="orders-o" wx:if="{{resource.doc}}"/>
                         <text>{{resource.title}}</text>
+                        </navigator>
                     </view>
                 </block>
             </van-collapse-item>

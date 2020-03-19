@@ -63,6 +63,13 @@
 					"pathName": "pages/course/course",
 					"query": "course_id=5",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/learn/learn",
+					"pathName": "pages/learn/learn",
+					"query": "course_id=5&resource_id=9",
+					"scene": null
 				}
 			]
 		}

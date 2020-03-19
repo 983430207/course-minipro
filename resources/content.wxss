@@ -1,0 +1,16 @@
+.__h1,.__h2,.__h3 {
+    font-size: 0.7rem;
+    border-bottom: solid 1px #ccc;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .__pre {
+    background: #f8f8f8;
+    padding-left: 2px;
+  }
+  
+  .__p, .__ul {
+    line-height: 250%;
+    color: #555;
+  }
