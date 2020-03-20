@@ -1,2 +1,12 @@
 <!--pages/my/my.wxml-->
-<text>个人中心功能，下个版本开放，敬请期待。</text>
+<view class='container'>
+<view class='page_title'>个人中心</view>
+<view class='flex'>
+    <view style='text-align:center; color:#666; margin:20px 0;'>个人中心尚未开放，敬请期待！</view>
+<van-cell-group>
+  <van-cell title="姓名" value="1024编程实验室" />
+  <van-cell title="基础" value="PHP掌握的程度" label="学习过 十天学会PHP系列，无独立开发经验" border="{{ false }}" />
+    <van-cell title="积分" value="100" />
+</van-cell-group>
+</view>
+</view>

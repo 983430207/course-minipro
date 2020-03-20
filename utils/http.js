@@ -5,7 +5,7 @@
  * @param {object} params    请求附加的参数
  */
 function http(url, method, params){
-    let apiPath = "http://laravel1024.com/api/v1"
+    let apiPath = "https://laravel.sodevel.com/api/v1"
     wx.request({
         url: apiPath + url,
         data: params.data ? params.data : {},
